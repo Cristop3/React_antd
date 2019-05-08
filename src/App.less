@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+  height:100%;
+}
+
+
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.contentApp{
+  width: 100%;
+  height:100%;
+  .contentApp-content{
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding:20px;
+    height:100%;
+  }
+  .contentApp-content::-webkit-scrollbar{/*滚动条整体样式*/
+    width:4px;
+    height:4px;
+  }
+  .contentApp-content::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(0,0,0,0.2);
+  }
+  /* .myContent_content::-webkit-scrollbar-track {/*滚动条里面轨道
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 0;
+    background: rgba(0,0,0,0.1);
+  } */
+}

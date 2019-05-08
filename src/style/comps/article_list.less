@@ -1,0 +1,55 @@
+.listContent {
+    padding: 0 20px;
+    .singleArt-item {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px dotted #ddd;
+        padding: 1rem 0 1rem 0;
+        font-size: 12px;
+
+        .singleArt-item-title {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+
+            .singleArt-item-title-txt {
+                font-size: 18px;
+                columns: #4f4f4f;
+                margin-bottom: 0;
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            .singleArt-item-title-txt:hover {
+                color: red;
+            }
+        }
+
+        .singleArt-item-info {
+            margin-top: 0.5rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .singleArt-item-info-left {
+                span {
+                    margin-right: 1.5rem;
+
+                }
+            }
+
+            .singleArt-item-info-handle {
+                margin-left: auto;
+
+                span {
+                    font-size: 12px;
+                    cursor: pointer;
+                }
+
+                .ant-divider.ant-divider-vertical {
+                    background-color: #8A8A8A;
+                }
+            }
+        }
+    }
+}
