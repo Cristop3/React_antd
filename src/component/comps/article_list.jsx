@@ -2,77 +2,21 @@ import React from 'react';
 import '../../style/comps/article_list.less';
 import { Icon,Button,Divider,Badge} from 'antd';
 
-//构造数据
-const json = [
-    {
-        title:'我是标题1',
-        type:'原创',
-        time:'2019-05-08 11:46:50',
-        read:'11',
-        comment:'0',
-        articleType:'1',
-        id:'1'
-    },
-    {
-        title:'我是标题2',
-        type:'原创',
-        time:'2019-05-08 11:46:50',
-        read:'11',
-        comment:'0',
-        articleType:'1',
-        id:'2'
-    },
-    {
-        title:'我是标题2',
-        type:'原创',
-        time:'2019-05-08 11:46:50',
-        read:'11',
-        comment:'0',
-        articleType:'1',
-        id:'3'
-    },
-    {
-        title:'我是标题3',
-        type:'原创',
-        time:'2019-05-08 11:46:50',
-        read:'11',
-        articleType:'1',
-        comment:'0',
-        id:'4'
-    },
-    {
-        title:'我是标题4',
-        type:'原创',
-        time:'2019-05-08 11:46:50',
-        read:'11',
-        comment:'0',
-        articleType:'1',
-        id:'5'
-    },
-    {
-        title:'我是标题5',
-        type:'原创',
-        time:'2019-05-08 11:46:50',
-        read:'11',
-        comment:'0',
-        articleType:'1',
-        id:'6'
-    },
-    {
-        title:'我是标题6',
-        type:'原创',
-        time:'2019-05-08 11:46:50',
-        read:'11',
-        comment:'0',
-        articleType:'1',
-        id:'7'
-    }
-]
+import axios from '../../axios/axios';
+
 
 class ArticleList extends React.Component{
     constructor(props){
         super(props)
         this.state={}
+    }
+
+    componentDidMount = () => {
+        axios.getMockData('/rest/data').then(function(res){
+            console.log(res)
+        }).catch(function(err){
+            console.log(err)
+        })
     }
 
     render(){

@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom';
 // 引入antd
 import 'antd/dist/antd.css';
 import './index.css';
-// import App from './App';
+
+
+
 //引入路由
 import MyRouters from './route/routes';
 import * as serviceWorker from './serviceWorker';
+
+//引入mock
+require('./mock');
 
 ReactDOM.render(MyRouters, document.getElementById('root'));
 
