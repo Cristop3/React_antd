@@ -50,19 +50,19 @@ class Article extends React.Component{
                 </div>
                 <Tabs size='large'>
                     <TabPane tab={<span><Icon type='apple' />全部</span>} key="1">
-                        <ArticleList></ArticleList>
+                        <ArticleList type="all"></ArticleList>
                     </TabPane>
                     <TabPane tab={<span><Icon type='android' />公开</span>} key='2'>
-                        x2
+                        <ArticleList type="apublic"></ArticleList>
                     </TabPane>   
                     <TabPane tab={<span><Icon type='apple' />私密</span>} key="3">
-                        x3
+                         <ArticleList type="aprivate"></ArticleList>
                     </TabPane>
                     <TabPane tab={<span><Icon type='android' />草稿</span>} key='4'>
-                        x4
+                        <ArticleList type="adraft"></ArticleList>
                     </TabPane> 
                     <TabPane tab={<span><Icon type='android' />删除</span>} key='5'>
-                        x5
+                        <ArticleList type="adelete"></ArticleList>
                     </TabPane> 
                 </Tabs>
 
