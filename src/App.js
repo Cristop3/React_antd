@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Route,Redirect,Switch} from 'react-router-dom';
 import Article from './component/business/article.jsx';
+import Write from './component/business/write.jsx';
 import Category from './component/business/category.jsx';
 import UserInfo from './component/business/userinfo.jsx';
 import Dashboard from './component/business/dashBoard.jsx';
@@ -47,6 +48,7 @@ class App extends Component {
               <Route path='/app/modules' component={Modules}></Route>
               <Route path='/app/setafter' component={Setafter}></Route>
               <Route path='/app/setbefore' component={Setbefore}></Route>
+              <Route path='/app/write' component={Write}></Route>
               <Redirect from='/app' to='/app/dashboard' />
             </Switch>
           </Content>

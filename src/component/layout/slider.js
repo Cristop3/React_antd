@@ -31,7 +31,7 @@ class Slider extends React.Component{
                     onCollapse={this.onCollapse}
                 >
                     <Menu
-                        defaultOpenKeys={['sub1','sub2']}
+                        defaultOpenKeys={['sub1','sub2','sub3']}
                         defaultSelectedKeys={this.state.selectKeys}
                         mode = "inline"
                         theme = 'dark'
@@ -47,7 +47,10 @@ class Slider extends React.Component{
                             key="sub1" 
                             title = {<span><Icon type='mail' /><span>我的博客</span></span>}
                         >
-                            <Menu.Item key="/app/article"><Link to='/app/article'>文章管理</Link></Menu.Item>
+                            <SubMenu key='sub3' title={<span><Icon type='mail' /><span>文章管理</span></span>}>
+                                <Menu.Item key="/app/article"><Link to='/app/article'>查看文章</Link></Menu.Item>
+                                <Menu.Item key="/app/write"><Link to='/app/write'>写博客</Link></Menu.Item>
+                            </SubMenu >
                             <Menu.Item key="/app/category"><Link to='/app/category'>类别管理</Link></Menu.Item>
                             <Menu.Item key="/app/column"><Link to='/app/column'>专栏管理</Link></Menu.Item>
                             <Menu.Item key="/app/comment"><Link to='/app/comment'>评论管理</Link></Menu.Item>
